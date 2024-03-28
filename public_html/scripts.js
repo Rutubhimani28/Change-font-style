@@ -36,7 +36,8 @@ var b = function () {
       ;
     e = ![];
     return ag;
-  };
+  }
+    ;
 }();
 var a = b(this, function () {
   var e = function () {
@@ -128,18 +129,25 @@ var a = b(this, function () {
   af();
 });
 a();
+
+
+
 var normal = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+
 const fontgenArray = [
   "firework", "weirdBox", "littleSparkles", "diametricAngleFrame", "heartsBetween", "fullCrazy", "kirbyHug", "dottyJoiner", "wavyJoiner",
   "vaporwaveText", "arrowBelow", "crossAboveBelow", "strikeThrough", "tildeStrikeThrough", "underline", "doubleUnderline", "slashThrough",
   "scriptify"
 ];
+
 const fontgenArrayMap = [
   "invertedSquaresCharMapFun", "wideTextCharMapFun", "squaresCharMapFun", "subscriptCharMapFun", "bentTextCharMapFun", "neonCharMapFun", "futureAlienCharMapFun", "squiggleCharMapFun",
   "squiggle2CharMapFun", "squiggle3CharMapFun", "squiggle4CharMapFun", "squiggle5CharMapFun", "squiggle6CharMapFun", "boldCharMapFun", "oldEnglishCharMapFun", "medievalCharMapFun", "cursiveCharMapFun",
   "doubleStruckCharMapFun", "italicCharMapFun", "boldItalicCharMapFun", "monospaceCharMapFun", "upperAnglesCharMapFun", "greekCharMapFun", "symbolsCharMapFun", "currencyCharMapFun", "asianStyleCharMapFun",
   "asianStyle2CharMapFun"
 ];
+
+
 function applyCharMap(map, text) {
   let out = "";
   for (let c of text.split("")) {
@@ -149,10 +157,12 @@ function applyCharMap(map, text) {
   }
   return out;
 }
+
 function textGun(text) {
 
   return "▄︻デ" + slashThrough(text) + "══━一";
 }
+
 function invertedSquaresCharMapFun(text) {
   return applyCharMap(invertedSquaresCharMap, text);
 }
@@ -234,6 +244,7 @@ function asianStyleCharMapFun(text) {
 function asianStyle2CharMapFun(text) {
   return applyCharMap(asianStyle2CharMap, text);
 }
+
 var luni = new Lunicode();
 luni.tools.creepify.options.maxHeight = 10;
 
@@ -241,6 +252,7 @@ function crazyWithFlourishOrSymbols(text) {
   if (Math.random() < 0.7) return wrapInSymbols(crazifyText(text), 2);
   else return wrapInFlourish(crazifyText(text), 2);
 }
+
 function strikeThrough(text) {
   return text.split("").join("̶") + "̶";
 }
@@ -268,11 +280,13 @@ function arrowBelow(text) {
 function crossAboveBelow(text) {
   return text.split("").join("͓̽") + "͓̽";
 }
+
 const wingdingsCharMap =
   { "0": "📁︎", "1": "📂︎", "2": "📄︎", "3": "🗏︎", "4": "🗐︎", "5": "🗄︎", "6": "⌛︎", "7": "🖮︎", "8": "🖰︎", "9": "🖲︎", "!": "✏︎", "\"": "✂︎", "#": "✁︎", "$": "👓︎", "%": "🕭︎", "&": "🕮︎", "'": "🕯︎", "(": "🕿︎", ")": "✆︎", "*": "🖂︎", "+": "🖃︎", ",": "📪︎", "-": "📫︎", ".": "📬︎", "/": "📭︎", ":": "🖳︎", ";": "🖴︎", "<": "🖫︎", "=": "🖬︎", ">": "✇︎", "?": "✍︎", "A": "✌︎", "B": "👌︎", "C": "👍︎", "D": "👎︎", "E": "☜︎", "F": "☞︎", "G": "☝︎", "H": "☟︎", "I": "✋︎", "J": "☺︎", "K": "😐︎", "L": "☹︎", "M": "💣︎", "N": "☠︎", "O": "⚐︎", "P": "🏱︎", "Q": "✈︎", "R": "☼︎", "S": "💧︎", "T": "❄︎", "U": "🕆︎", "V": "✞︎", "W": "🕈︎", "X": "✠︎", "Y": "✡︎", "Z": "☪︎", "[": "☯︎", "\\": "ॐ︎", "]": "☸︎", "^": "♈︎", "_": "♉︎", "`": "♊︎", "a": "♋︎", "b": "♌︎", "c": "♍︎", "d": "♎︎", "e": "♏︎", "f": "♐︎", "g": "♑︎", "h": "♒︎", "i": "♓︎", "j": "🙰", "k": "🙵", "l": "●︎", "m": "❍︎", "n": "■︎", "o": "□︎", "p": "◻︎", "q": "❑︎", "r": "❒︎", "s": "⬧︎", "t": "⧫︎", "u": "◆︎", "v": "❖︎", "w": "⬥︎", "x": "⌧︎", "y": "⍓︎", "z": "⌘︎", "{": "❀︎", "|": "✿︎", "}": "❝︎", "~": "❞︎", " ": "▯︎", "€": "⓪︎", " ": "①︎", "‚": "②︎", "ƒ": "③︎", "„": "④︎", "…": "⑤︎", "†": "⑥︎", "‡": "⑦︎", "ˆ": "⑧︎", "‰": "⑨︎", "Š": "⑩︎", "‹": "⓿︎", "Œ": "❶︎", " ": "❷︎", "Ž": "❸︎", " ": "❹︎", " ": "❺︎", "‘": "❻︎", "’": "❼︎", "“": "❽︎", "”": "❾︎", "•": "❿︎", "–": "◻︎", "—": "◻︎", "˜": "◻︎", "™": "◻︎", "š": "◻︎", "›": "◻︎", "œ": "◻︎", " ": "◻︎", "ž": "·︎", "Ÿ": "•︎", "¡": "○︎", "¢": "⭕︎", "£": "◻︎", "¤": "◉︎", "¥": "◎︎", "¦": "◻︎", "§": "▪︎", "¨": "◻︎", "©": "◻︎", "ª": "✦︎", "«": "★︎", "¬": "✶︎", "®": "✹︎", "¯": "✵︎", "°": "◻︎", "±": "⌖︎", "²": "⟡︎", "³": "⌑︎", "´": "◻︎", "µ": "✪︎", "¶": "✰︎", "·": "🕐︎", "¸": "🕑︎", "¹": "🕒︎", "º": "🕓︎", "»": "🕔︎", "¼": "🕕︎", "½": "🕖︎", "¾": "🕗︎", "¿": "🕘︎", "À": "🕙︎", "Á": "🕚︎", "Â": "🕛︎", "Ã": "◻︎", "Ä": "◻︎", "Å": "◻︎", "Æ": "◻︎", "Ç": "◻︎", "È": "◻︎", "É": "◻︎", "Ê": "◻︎", "Ë": "◻︎", "Ì": "◻︎", "Í": "◻︎", "Î": "◻︎", "Ï": "◻︎", "Ð": "◻︎", "Ñ": "◻︎", "Ò": "◻︎", "Ó": "◻︎", "Ô": "◻︎", "Õ": "⌫︎", "Ö": "⌦︎", "×": "◻︎", "Ø": "➢︎", "Ù": "◻︎", "Ú": "◻︎", "Û": "◻︎", "Ü": "➲︎", "Ý": "◻︎", "Þ": "◻︎", "ß": "◻︎", "à": "◻︎", "á": "◻︎", "â": "◻︎", "ã": "◻︎", "ä": "◻︎", "å": "◻︎", "æ": "◻︎", "ç": "◻︎", "è": "➔︎", "é": "◻︎", "ê": "◻︎", "ë": "◻︎", "ì": "◻︎", "í": "◻︎", "î": "◻︎", "ï": "⇦︎", "ð": "⇨︎", "ñ": "⇧︎", "ò": "⇩︎", "ó": "⬄︎", "ô": "⇳︎", "õ": "⬀︎", "ö": "⬁︎", "÷": "⬃︎", "ø": "⬂︎", "ù": "▭︎", "ú": "▫︎", "û": "✗︎", "ü": "✓︎", "ý": "☒︎", "þ": "☑︎", "ÿ": "◻︎" };
 function wingdings(text) {
   return text.split("").map(function (a) { return wingdingsCharMap[a] ? wingdingsCharMap[a] : a }).join("");
 }
+
 const vaporwaveCharMap = { " ": "　", "`": "`", "1": "１", "2": "２", "3": "３", "4": "４", "5": "５", "6": "６", "7": "７", "8": "８", "9": "９", "0": "０", "-": "－", "=": "＝", "~": "~", "!": "！", "@": "＠", "#": "＃", "$": "＄", "%": "％", "^": "^", "&": "＆", "*": "＊", "(": "（", ")": "）", "_": "_", "+": "＋", "q": "ｑ", "w": "ｗ", "e": "ｅ", "r": "ｒ", "t": "ｔ", "y": "ｙ", "u": "ｕ", "i": "ｉ", "o": "ｏ", "p": "ｐ", "[": "[", "]": "]", "\\": "\\", "Q": "Ｑ", "W": "Ｗ", "E": "Ｅ", "R": "Ｒ", "T": "Ｔ", "Y": "Ｙ", "U": "Ｕ", "I": "Ｉ", "O": "Ｏ", "P": "Ｐ", "{": "{", "}": "}", "|": "|", "a": "ａ", "s": "ｓ", "d": "ｄ", "f": "ｆ", "g": "ｇ", "h": "ｈ", "j": "ｊ", "k": "ｋ", "l": "ｌ", ";": "；", "'": "＇", "A": "Ａ", "S": "Ｓ", "D": "Ｄ", "F": "Ｆ", "G": "Ｇ", "H": "Ｈ", "J": "Ｊ", "K": "Ｋ", "L": "Ｌ", ":": "：", "\"": "\"", "z": "ｚ", "x": "ｘ", "c": "ｃ", "v": "ｖ", "b": "ｂ", "n": "ｎ", "m": "ｍ", ",": "，", ".": "．", "/": "／", "Z": "Ｚ", "X": "Ｘ", "C": "Ｃ", "V": "Ｖ", "B": "Ｂ", "N": "Ｎ", "M": "Ｍ", "<": "<", ">": ">", "?": "？" };
 function vaporwaveText(text) {
   var numSpaces = text.split(" ").length;
@@ -310,6 +324,7 @@ function getAsianChars(n) {
   }
   return str;
 }
+
 const flourishArray = [
   "꧁༒☬ [[text]] ☬༒꧂",
   "◥꧁ད [[text]] ཌ꧂◤",
@@ -388,6 +403,7 @@ const flourishArray = [
   ".•♫•♬• [[text]] •♬•♫•.",
   "ღ(¯`◕‿◕´¯) ♫ ♪ ♫ [[text]] ♫ ♪ ♫ (¯`◕‿◕´¯)ღ",
   "«-(¯`v´¯)-« [[text]] »-(¯`v´¯)-»"];
+
 function wrapInFlourish(text) {
   return flourishArray[Math.floor(Math.random() * flourishArray.length)].replace("[[text]]", text);
 }
@@ -406,21 +422,26 @@ function weirdBox(text) {
 function littleSparkles(text) {
   return "˜”*°•.˜”*°• " + text + " •°*”˜.•°*”˜";
 }
+
 function kirbyHug(text) {
   return "(っ◔◡◔)っ ♥ " + text + " ♥"
 }
+
 function dottyJoiner(text) {
   return "░" + text.split("").join("░") + "░";
 }
+
 function wavyJoiner(text) {
   return "≋" + text.split("").join("≋") + "≋";
 }
 function diametricAngleFrame(text) {
   return text.replace(/([^\s])/g, "『$1』");
 }
+
 function thickBlockFramed(text) {
   return text.replace(/([^\s])/g, "【$1】");
 }
+/* new added */
 var newtext = {
   s1: {
     1: "&alpha;", 2: "&#4310;", 3: "&#392;", 4: "&#1283;", 5: "&#1213;", 6: "&#989;", 7: "&#608;", 8: "&#1291;", 9: "&iota;", 10: "&#669;", 11: "&#409;", 12: "&#645;", 13: "&#625;", 14: "&#627;", 15: "&sigma;", 16: "&rho;", 17: "&#985;", 18: "&#638;", 19: "&#642;", 20: "&#410;", 21: "&upsilon;", 22: "&#651;", 23: "&#623;", 24: "x", 25: "&#4327;", 26: "&#549;", 27: "A", 28: "B", 29: "C", 30: "D", 31: "E", 32: "F", 33: "G", 34: "H", 35: "I", 36: "J", 37: "K", 38: "L", 39: "M", 40: "N", 41: "O", 42: "P", 43: "Q", 44: "R", 45: "S", 46: "T", 47: "U", 48: "V", 49: "W", 50: "X", 51: "Y", 52: "Z", 53: '1', 54: '2', 55: '3', 56: '4', 57: '5', 58: '6', 59: '7', 60: '8', 61: '9', 62: '0'
@@ -514,8 +535,8 @@ var newtext = {
     1: "a&#828;", 2: "b&#828;", 3: "c&#828;", 4: "d&#828;", 5: "e&#828;", 6: "f&#828;", 7: "g&#828;", 8: "h&#828;", 9: "i&#828;", 10: "j&#828;", 11: "k&#828;", 12: "l&#828;", 13: "m&#828;", 14: "n&#828;", 15: "o&#828;", 16: "p&#828;", 17: "q&#828;", 18: "r&#828;", 19: "s&#828;", 20: "t&#828;", 21: "u&#828;", 22: "v&#828;", 23: "w&#828;", 24: "x&#828;", 25: "y&#828;", 26: "z&#828;", 27: "A&#828;", 28: "B&#828;", 29: "C&#828;", 30: "D&#828;", 31: "E&#828;", 32: "F&#828;", 33: "G&#828;", 34: "H&#828;", 35: "I&#828;", 36: "J&#828;", 37: "K&#828;", 38: "L&#828;", 39: "M&#828;", 40: "N&#828;", 41: "O&#828;", 42: "P&#828;", 43: "Q&#828;", 44: "R&#828;", 45: "S&#828;", 46: "T&#828;", 47: "U&#828;", 48: "V&#828;", 49: "W&#828;", 50: "X&#828;", 51: "Y&#828;", 52: "Z&#828;", 53: "1&#828;", 54: "2&#828;", 55: "3&#828;", 56: "4&#828;", 57: "5&#828;", 58: "6&#828;", 59: "7&#828;", 60: "8&#828;", 61: "9&#828;", 62: "0&#828;"
   },
 }
-function Change(intext, id) {
 
+function Change(intext, id) {
   var text = "";
 
   var intext = intext;
@@ -535,6 +556,7 @@ function Change(intext, id) {
   }
   return text;
 }
+/* eslint-disable */
 const futureAlienCharMap = { "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9", "a": "ᗩ", "b": "ᗷ", "c": "ᑢ", "d": "ᕲ", "e": "ᘿ", "f": "ᖴ", "g": "ᘜ", "h": "ᕼ", "i": "ᓰ", "j": "ᒚ", "k": "ᖽᐸ", "l": "ᒪ", "m": "ᘻ", "n": "ᘉ", "o": "ᓍ", "p": "ᕵ", "q": "ᕴ", "r": "ᖇ", "s": "S", "t": "ᖶ", "u": "ᑘ", "v": "ᐺ", "w": "ᘺ", "x": "᙭", "y": "ᖻ", "z": "ᗱ", "A": "ᗩ", "B": "ᗷ", "C": "ᑢ", "D": "ᕲ", "E": "ᘿ", "F": "ᖴ", "G": "ᘜ", "H": "ᕼ", "I": "ᓰ", "J": "ᒚ", "K": "ᖽᐸ", "L": "ᒪ", "M": "ᘻ", "N": "ᘉ", "O": "ᓍ", "P": "ᕵ", "Q": "ᕴ", "R": "ᖇ", "S": "S", "T": "ᖶ", "U": "ᑘ", "V": "ᐺ", "W": "ᘺ", "X": "᙭", "Y": "ᖻ", "Z": "ᗱ" };
 const squiggle6CharMap = { "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9", "a": "ค", "b": "๖", "c": "¢", "d": "໓", "e": "ē", "f": "f", "g": "ງ", "h": "h", "i": "i", "j": "ว", "k": "k", "l": "l", "m": "๓", "n": "ຖ", "o": "໐", "p": "p", "q": "๑", "r": "r", "s": "Ş", "t": "t", "u": "น", "v": "ง", "w": "ຟ", "x": "x", "y": "ฯ", "z": "ຊ", "A": "ค", "B": "๖", "C": "¢", "D": "໓", "E": "ē", "F": "f", "G": "ງ", "H": "h", "I": "i", "J": "ว", "K": "k", "L": "l", "M": "๓", "N": "ຖ", "O": "໐", "P": "p", "Q": "๑", "R": "r", "S": "Ş", "T": "t", "U": "น", "V": "ง", "W": "ຟ", "X": "x", "Y": "ฯ", "Z": "ຊ" };
 const squiggle5CharMap = { "0": "0", "1": "1", "2": "2", "3": "3", "4": "4", "5": "5", "6": "6", "7": "7", "8": "8", "9": "9", "a": "ą", "b": "ც", "c": "ƈ", "d": "ɖ", "e": "ɛ", "f": "ʄ", "g": "ɠ", "h": "ɧ", "i": "ı", "j": "ʝ", "k": "ƙ", "l": "Ɩ", "m": "ɱ", "n": "ŋ", "o": "ơ", "p": "℘", "q": "զ", "r": "ཞ", "s": "ʂ", "t": "ɬ", "u": "ų", "v": "۷", "w": "ῳ", "x": "ҳ", "y": "ყ", "z": "ʑ", "A": "ą", "B": "ც", "C": "ƈ", "D": "ɖ", "E": "ɛ", "F": "ʄ", "G": "ɠ", "H": "ɧ", "I": "ı", "J": "ʝ", "K": "ƙ", "L": "Ɩ", "M": "ɱ", "N": "ŋ", "O": "ơ", "P": "℘", "Q": "զ", "R": "ཞ", "S": "ʂ", "T": "ɬ", "U": "ų", "V": "۷", "W": "ῳ", "X": "ҳ", "Y": "ყ", "Z": "ʑ" };
@@ -568,12 +590,15 @@ const wideTextCharMap = { "`": "`", "1": "１", "2": "２", "3": "３", "4": "�
 // on GitHub: https://github.com/combatwombat/Lunicode.js
 // Copyright © 2012 Robert Gerlach - robsite.net
 function Lunicode() { this.tools = { flip: { init: function () { for (i in this.map) this.map[this.map[i]] = i }, encode: function (i) { for (var r, t = [], o = 0, h = i.length; h > o; o++)r = i.charAt(o), o > 0 && ("̤" == r || "̗" == r || "̖" == r || "̮" == r) ? (r = this.map[i.charAt(o - 1) + r], t.pop()) : (r = this.map[r], "undefined" == typeof r && (r = i.charAt(o))), t.push(r); return t.reverse().join("") }, decode: function (i) { for (var r, t = [], o = 0, h = i.length; h > o; o++)r = i.charAt(o), o > 0 && ("̤" == r || "̗" == r || "̖" == r || "̮" == r) ? (r = this.map[i.charAt(o - 1) + r], t.pop()) : (r = this.map[r], "undefined" == typeof r && (r = i.charAt(o))), t.push(r); return t.reverse().join("") }, map: { a: "ɐ", b: "q", c: "ɔ", d: "p", e: "ǝ", f: "ɟ", g: "ɓ", h: "ɥ", i: "ı", j: "ɾ", k: "ʞ", l: "l", m: "ɯ", n: "u", r: "ɹ", t: "ʇ", v: "ʌ", w: "ʍ", y: "ʎ", A: "∀", B: "ᙠ", C: "Ɔ", D: "ᗡ", E: "Ǝ", F: "Ⅎ", G: "⅁", J: "ſ", K: "⋊", L: "˥", M: "W", P: "Ԁ", Q: "Ό", R: "ᴚ", T: "⊥", U: "∩", V: "Λ", Y: "⅄", 1: "⇂", 2: "ᄅ", 3: "Ɛ", 4: "ㄣ", 5: "ގ", 6: "9", 7: "ㄥ", "&": "⅋", ".": "˙", '"': "„", ";": "؛", "[": "]", "(": ")", "{": "}", "?": "¿", "!": "¡", "'": ",", "<": ">", "‾": "_", "¯": "_", "‿": "⁀", "⁅": "⁆", "∴": "∵", "\r": "\n", "ß": "ᙠ", "̈": "̤", "ä": "ɐ̤", "ö": "o̤", "ü": "n̤", "Ä": "∀̤", "Ö": "O̤", "Ü": "∩̤", "´": " ̗", "é": "ǝ̗", "á": "ɐ̗", "ó": "o̗", "ú": "n̗", "É": "Ǝ̗", "Á": "∀̗", "Ó": "O̗", "Ú": "∩̗", "`": " ̖", "è": "ǝ̖", "à": "ɐ̖", "ò": "o̖", "ù": "n̖", "È": "Ǝ̖", "À": "∀̖", "Ò": "O̖", "Ù": "∩̖", "^": " ̮", "ê": "ǝ̮", "â": "ɐ̮", "ô": "o̮", "û": "n̮", "Ê": "Ǝ̮", "Â": "∀̮", "Ô": "O̮", "Û": "∩̮" } }, mirror: { init: function () { for (i in this.map) this.map[this.map[i]] = i }, encode: function (i) { for (var r, t = [], o = [], h = 0, n = i.length; n > h; h++)r = i.charAt(h), h > 0 && ("̈" == r || "̀" == r || "́" == r || "̂" == r) ? (r = this.map[i.charAt(h - 1) + r], t.pop()) : (r = this.map[r], "undefined" == typeof r && (r = i.charAt(h))), "\n" == r ? (o.push(t.reverse().join("")), t = []) : t.push(r); return o.push(t.reverse().join("")), o.join("\n") }, decode: function (i) { for (var r, t = [], o = [], h = 0, n = i.length; n > h; h++)r = i.charAt(h), h > 0 && ("̈" == r || "̀" == r || "́" == r || "̂" == r) ? (r = this.map[i.charAt(h - 1) + r], t.pop()) : (r = this.map[r], "undefined" == typeof r && (r = i.charAt(h))), "\n" == r ? (o.push(t.reverse().join("")), t = []) : t.push(r); return o.push(t.reverse().join("")), o.join("\n") }, map: { a: "ɒ", b: "d", c: "ɔ", e: "ɘ", f: "Ꮈ", g: "ǫ", h: "ʜ", j: "ꞁ", k: "ʞ", l: "|", n: "ᴎ", p: "q", r: "ɿ", s: "ꙅ", t: "ƚ", y: "ʏ", z: "ƹ", B: "ᙠ", C: "Ɔ", D: "ᗡ", E: "Ǝ", F: "ꟻ", G: "Ꭾ", J: "Ⴑ", K: "⋊", L: "⅃", N: "Ͷ", P: "ꟼ", Q: "Ọ", R: "Я", S: "Ꙅ", Z: "Ƹ", 1: "", 2: "", 3: "", 4: "", 5: "", 6: "", 7: "", "&": "", ";": "", "[": "]", "(": ")", "{": "}", "?": "⸮", "<": ">", "ä": "ɒ̈", "ß": "ᙠ", "´": "`", "é": "ɘ̀", "á": "ɒ̀", "ó": "ò", "ú": "ù", "É": "Ǝ̀", "Á": "À", "Ó": "Ò", "Ú": "Ù", "`": "´", "è": "ɘ́", "à": "ɒ́", "È": "Ǝ́", "ê": "ɘ̂", "â": "ɒ̂", "Ê": "Ǝ̂", "Ø": "ᴓ", "ø": "ᴓ" } }, creepify: { init: function () { for (var i = 768; 789 >= i; i++)this.diacriticsTop.push(String.fromCharCode(i)); for (var i = 790; 819 >= i; i++)794 != i && 795 != i && this.diacriticsBottom.push(String.fromCharCode(i)); this.diacriticsTop.push(String.fromCharCode(794)), this.diacriticsTop.push(String.fromCharCode(795)); for (var i = 820; 824 >= i; i++)this.diacriticsMiddle.push(String.fromCharCode(i)); for (var i = 825; 828 >= i; i++)this.diacriticsBottom.push(String.fromCharCode(i)); for (var i = 829; 836 >= i; i++)this.diacriticsTop.push(String.fromCharCode(i)); this.diacriticsTop.push(String.fromCharCode(836)), this.diacriticsBottom.push(String.fromCharCode(837)), this.diacriticsTop.push(String.fromCharCode(838)), this.diacriticsBottom.push(String.fromCharCode(839)), this.diacriticsBottom.push(String.fromCharCode(840)), this.diacriticsBottom.push(String.fromCharCode(841)), this.diacriticsTop.push(String.fromCharCode(842)), this.diacriticsTop.push(String.fromCharCode(843)), this.diacriticsTop.push(String.fromCharCode(844)), this.diacriticsBottom.push(String.fromCharCode(845)), this.diacriticsBottom.push(String.fromCharCode(846)), this.diacriticsTop.push(String.fromCharCode(848)), this.diacriticsTop.push(String.fromCharCode(849)), this.diacriticsTop.push(String.fromCharCode(850)), this.diacriticsBottom.push(String.fromCharCode(851)), this.diacriticsBottom.push(String.fromCharCode(852)), this.diacriticsBottom.push(String.fromCharCode(853)), this.diacriticsBottom.push(String.fromCharCode(854)), this.diacriticsTop.push(String.fromCharCode(855)), this.diacriticsTop.push(String.fromCharCode(856)), this.diacriticsBottom.push(String.fromCharCode(857)), this.diacriticsBottom.push(String.fromCharCode(858)), this.diacriticsTop.push(String.fromCharCode(859)), this.diacriticsBottom.push(String.fromCharCode(860)), this.diacriticsTop.push(String.fromCharCode(861)), this.diacriticsTop.push(String.fromCharCode(861)), this.diacriticsBottom.push(String.fromCharCode(863)), this.diacriticsTop.push(String.fromCharCode(864)), this.diacriticsTop.push(String.fromCharCode(865)) }, encode: function (r) { var t, o = ""; for (i in r) { if (t = r[i], this.options.middle && (t += this.diacriticsMiddle[Math.floor(Math.random() * this.diacriticsMiddle.length)]), this.options.top) for (var h = this.diacriticsTop.length - 1, n = 0, a = this.options.maxHeight - Math.random() * (this.options.randomization / 100 * this.options.maxHeight); a > n; n++)t += this.diacriticsTop[Math.floor(Math.random() * h)]; if (this.options.bottom) for (var s = this.diacriticsBottom.length - 1, n = 0, a = this.options.maxHeight - Math.random() * (this.options.randomization / 100 * this.options.maxHeight); a > n; n++)t += this.diacriticsBottom[Math.floor(Math.random() * s)]; o += t } return o }, decode: function (r) { var t, o = ""; for (i in r) t = r[i].charCodeAt(0), (768 > t || t > 865) && (o += r[i]); return o }, diacriticsTop: [], diacriticsMiddle: [], diacriticsBottom: [], options: { top: !0, middle: !0, bottom: !0, maxHeight: 15, randomization: 100 } }, bubbles: { init: function () { for (var i = 49; 57 >= i; i++)this.map[String.fromCharCode(i)] = String.fromCharCode(i + 9263); this.map[0] = "⓪"; for (var i = 65; 90 >= i; i++)this.map[String.fromCharCode(i)] = String.fromCharCode(i + 9333); for (var i = 97; 122 >= i; i++)this.map[String.fromCharCode(i)] = String.fromCharCode(i + 9327); for (i in this.map) this.mapInverse[this.map[i]] = i }, encode: function (r) { var t, o = "", h = !0; for (i in r) t = this.map[r[i]], "undefined" == typeof t && (r[i].charCodeAt(0) >= 33 ? (t = r[i] + String.fromCharCode(8413), h || (t = String.fromCharCode(8239) + String.fromCharCode(160) + String.fromCharCode(160) + String.fromCharCode(8239) + t)) : t = r[i]), o += t, h = "\n" == t; return o }, decode: function (r) { var t, o = "", h = ""; for (i in r) t = this.mapInverse[r[i]], o += "undefined" == typeof t ? r[i] : t; for (i in o) t = o[i].charCodeAt(0), 160 != t && 8239 != t && 8413 != t && (h += o[i]); return h }, map: {}, mapInverse: {} }, squares: { init: function () { }, encode: function (r) { var t, o = "", h = !0; for (i in r) r[i].charCodeAt(0) >= 33 ? (t = r[i] + String.fromCharCode(8414), h || (t = String.fromCharCode(8239) + String.fromCharCode(160) + String.fromCharCode(160) + String.fromCharCode(8239) + t)) : t = r[i], o += t, h = "\n" == t; return o }, decode: function (r) { var t, o = ""; for (i in r) t = r[i].charCodeAt(0), 160 != t && 8239 != t && 8414 != t && (o += r[i]); return o } }, roundsquares: { init: function () { }, encode: function (r) { var t, o = "", h = !0; for (i in r) r[i].charCodeAt(0) >= 33 ? (t = r[i] + String.fromCharCode(8419), h || (t = String.fromCharCode(160) + String.fromCharCode(160) + String.fromCharCode(160) + t)) : t = r[i], o += t, h = "\n" == t; return o }, decode: function (r) { var t, o = ""; for (i in r) t = r[i].charCodeAt(0), 160 != t && 8239 != t && 8419 != t && (o += r[i]); return o } }, bent: { init: function () { for (i in this.map) this.map[this.map[i]] = i }, encode: function (i) { for (var r, t = "", o = 0, h = i.length; h > o; o++)r = this.map[i.charAt(o)], "undefined" == typeof r && (r = i.charAt(o)), t += r; return t }, decode: function (i) { for (var r, t = "", o = 0, h = i.length; h > o; o++)r = this.map[i.charAt(o)], "undefined" == typeof r && (r = i.charAt(o)), t += r; return t }, map: { a: "ą", b: "ҍ", c: "ç", d: "ժ", e: "ҽ", f: "ƒ", g: "ց", h: "հ", i: "ì", j: "ʝ", k: "ҟ", l: "Ӏ", m: "ʍ", n: "ղ", o: "օ", p: "ք", q: "զ", r: "ɾ", s: "ʂ", t: "է", u: "մ", v: "ѵ", w: "ա", x: "×", y: "վ", z: "Հ", A: "Ⱥ", B: "β", C: "↻", D: "Ꭰ", E: "Ɛ", F: "Ƒ", G: "Ɠ", H: "Ƕ", I: "į", J: "ل", K: "Ҡ", L: "Ꝉ", M: "Ɱ", N: "ហ", O: "ට", P: "φ", Q: "Ҩ", R: "འ", S: "Ϛ", T: "Ͳ", U: "Ա", V: "Ỽ", W: "చ", X: "ჯ", Y: "Ӌ", Z: "ɀ", 0: "⊘", 1: "������", 2: "ϩ", 3: "Ӡ", 4: "५", 5: "Ƽ", 6: "Ϭ", 7: "7", 8: "������", 9: "९", "&": "⅋", "(": "{", ")": "}", "{": "(", "}": ")", "ä": "ą̈", "ö": "օ̈", "ü": "մ̈", "Ä": "Ⱥ̈", "Ö": "ට̈", "Ü": "Ա̈", "é": "ҽ́", "á": "ą́", "ó": "օ́", "ú": "մ́", "É": "Ɛ́", "Á": "Ⱥ́", "Ó": "ට́", "Ú": "Ա́", "è": "ҽ̀", "à": "ą̀", "ò": "օ̀", "ù": "մ̀", "È": "Ɛ̀", "À": "Ⱥ̀", "Ò": "ට̀", "Ù": "Ա̀", "ê": "ҽ̂", "â": "ą̂", "ô": "օ̂", "û": "մ̂", "Ê": "Ɛ̂", "Â": "Ⱥ̂", "Ô": "ට̂", "Û": "Ա̂" } }, tiny: { init: function () { for (i in this.map) this.map[this.map[i]] = i }, encode: function (i) { var r, t = ""; i = i.toUpperCase(); for (var o = 0, h = i.length; h > o; o++)r = this.map[i.charAt(o)], "undefined" == typeof r && (r = i.charAt(o)), t += r; return t }, decode: function (i) { for (var r, t = "", o = 0, h = i.length; h > o; o++)r = this.map[i.charAt(o)], "undefined" == typeof r && (r = i.charAt(o)), t += r; return t }, map: { A: "ᴀ", B: "ʙ", C: "ᴄ", D: "ᴅ", E: "ᴇ", F: "ꜰ", G: "ɢ", H: "ʜ", I: "ɪ", J: "ᴊ", K: "ᴋ", L: "ʟ", M: "ᴍ", N: "ɴ", O: "ᴏ", P: "ᴘ", Q: "Q", R: "ʀ", S: "ꜱ", T: "ᴛ", U: "ᴜ", V: "ᴠ", W: "ᴡ", X: "x", Y: "ʏ", Z: "ᴢ" } } }; for (i in this.tools) this.tools[i].init(); this.getHTML = function (i) { for (var r, t = "", o = !0, h = 0, n = 0, a = 0, s = i.length; s > a; a++)r = i.charCodeAt(a), 10 == r || 13 == r ? (t += "<br>\n", o = !0) : 32 == r ? o ? (t += " ", o = !1) : (t += " ", o = !0) : (r >= 55296 && 56319 >= r ? (h = r, n = 0) : h > 0 ? (r >= 56320 && 57343 >= r && (n = 1024 * (h - 55296) + (r - 56320) + 65536), h = 0) : n = r, 0 != n && (t += "&#x" + n.toString(16) + ";", o = !0)); return t } }
+
+
+
 // CUTE TEXT:
 function cuteText(text) {
   if (text.trim() === "") return "";
   qi = -1;
   var bounds = boundingString(Math.floor(Math.random() * 2) + 1);
-  return bounds + "  🎀  " + text.split(/([!?.]+)/gi).map(cuteSentence).join("") + "  🎀  " + esrever.reverse(bounds);
+  return bounds  + text.split(/([!?.]+)/gi).map(cuteSentence).join("")  + esrever.reverse(bounds);
 }
 function cuteSentence(sentence) {
   return sentence.split(/([\s,]+)/gi).map(cuteWord).join("");
@@ -627,12 +652,8 @@ var emoji = {
 };
 var round = ["❁", "🌺", "❀", "💮", "🏵", "🌸", "☯", "😍", "♡", "🍩", "🍬", "💙", "🌞", "💍", "🍪", "❤", "💗", "🍑", "💞"];
 var food = ["🍬", "🍭", "🍒", "🍎", "🍉", "🍇", "🍓", "🍌", "🍑", "🍰", "🎂", "🍩", "🍪", "🍧", "🍦", "🍫", "🍡"];
-var flowers = ["✿", "⚘", "❦", "❧", "✾", "❁", "❀", "💐", "🌸", "💮", "🏵", "🌹", "🌺", "🌻", "🌷", "☘", "🌱", "🌲", "🌳", "🌴", "🌿", "🍂"];
 var twinkles = ["⚛", "🌌", "🌠", "*", ":", "｡", "･ﾟ", "✧", "✮", "★", "✩", "⋆", ".", "°", "`", "✴", "｡", "✴", "⋆", "✳", "✶", "✷", "❈"];
 var animals = ["🐯", "🐎", "🐖", "🐷", "🐏", "🐑", "🐐", "🐫", "🐘", "🐭", "🐁", "🐀", "🐹", "🐰", "🐇", "🐿", "🐻", "🐨", "🐼", "🐾", "🐔", "🐓", "🐣", "🐤", "🐥", "🐦", "🐧", "🕊", "🐸", "🐢", "🐳", "🐋", "🐬", "🐟", "🐠", "🐡", "🐙", "🐚", "🐌", "🐞"];
-var plants = ["✿", "⚘", "❦", "❧", "✾", "❁", "❀", "💐", "🌸", "💮", "🏵", "🌹", "🌺", "🌻", "🌷", "☘", "🌱", "🌲", "🌳", "🌴", "🌿", "🍂"];
-var misc = ["🌌", "🌠", "🎉", "🎊", "🎈", "💌", "🎎", "🎁", "🎀", "🕯", "🔮", "🛀", "🎖", "🏆", "🏅", "👑", "💍", "👶", "👼", "👸", "👯", "👒", "👻"];
-var music = ["♫", "♬", "♪", "♩", "°", "｡", "✧", "🎻", "🎺", "🎸", "🎷", "📯"];
 
 var flourish = ["•?((¯°·._.• ", "ıllıllı ", "¸,ø¤º°`°º¤ø,¸¸,ø¤º° ", "°°°·.°·..·°¯°·._.· ", "•´¯`•. ", "×º°”˜`”°º× ", "•]••´º´•» ", "]|I{•------» ", "§.•´¨'°÷•..× ", "•°¯`•• ", "(¯`·.¸¸.·´¯`·.¸¸.-> ", "*´¯`*.¸¸.*´¯`* ", "(¯`·.¸¸.-> °º ", "°·.¸.·°¯°·.¸.·°¯°·.¸.-> ", "•._.••´¯``•.¸¸.•` ", "¸„.-•~¹°”ˆ˜¨ ", "(¯´•._.• ", "••¤(`×", "•´¯`•» ", "`•.,¸¸,.•´¯ ", "¸,ø¤º°`°º¤ø,¸ ", ".o0×X×0o. ", ",-*'^'~*-.,_,.-*~ ", "`•.¸¸.•´´¯`••._.• ", "—(••÷", "¤¸¸.•´¯`•¸¸.•..>> ", "••.•´¯`•.•• ", ".•°¤*(¯`★´¯)*¤° ", "๑۞๑,¸¸,ø¤º°`°๑۩ ", "-漫~*'¨¯¨'*·舞~ ", "★·.·´¯`·.·★ ", "▁ ▂ ▄ ▅ ▆ ▇ █ ", "▀▄▀▄▀▄ ", "▌│█║▌║▌║ "];
 
@@ -662,20 +683,7 @@ function scriptify(text) {
   text = charArray.join("");
   return text;
 }
-function shuffleArray(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
-}
+
 function randomElement(a) {
   return a[Math.floor(Math.random() * a.length)];
 }
@@ -710,6 +718,7 @@ function randomSymbols(n) {
 function randInt(min, max) {
   return min + Math.floor(Math.random() * (max - min + 1));
 }
+
 $(document).ready(function () {
   $("#loader").hide();
   $(window).scroll(function () {
@@ -726,18 +735,8 @@ $(document).ready(function () {
     return ![];
   });
 });
+
 $(document).ready(function () {
-
-
-
-  /*
-  
-    $("#fontSize").on("input change", function () {
-      $("<style> .myfonts p{font-size:" + $(this).val() + "px} </style>").insertBefore("body");
-  
-    });
-  */
-
 
   gen("Letras Bonita");
 
@@ -752,25 +751,6 @@ $(document).ready(function () {
 
   });
 
-  var url = window.location.href;
-  var params = url.split('?=');
-  urltext = params[1];
-  if (urltext) {
-    urltext = decodeURIComponent(urltext);
-    $('#nemo-text').val(urltext);
-    gen(urltext);
-  }
-
-
-  $(document).on("click", ".myfontslist .myfonts", function () {
-
-    $(".myfontsrecentlist").prepend('<div class="myfonts"><span>Recently Used</span><p onclick="copyit(this)" data-clipboard-target=".' + $(this).find("p").attr('class') + '" class="' + $(this).find("p").attr('class') + '">' + $(this).find("p").text() + '</p></div>');
-
-    if ($('.myfontsrecentlist .myfonts').length > 3) {
-      $('.myfontsrecentlist .myfonts').last().remove();
-    }
-
-  });
   function gen() {
     var text = $('#nemo-text').val();
     $('.flourish1').html(wrapInFlourish(am(text)));
@@ -942,6 +922,7 @@ $(document).ready(function () {
 
 
 });
+
 if ($(window).width() > 960) {
   $(window).scroll(function () {
     var e = $(window).scrollTop();
