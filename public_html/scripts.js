@@ -752,32 +752,25 @@ $(document).ready(function () {
 
   });
 
+  var url = window.location.href;
+  var params = url.split('?=');
+  urltext = params[1];
+  if (urltext) {
+    urltext = decodeURIComponent(urltext);
+    $('#nemo-text').val(urltext);
+    gen(urltext);
+  }
 
 
+  $(document).on("click", ".myfontslist .myfonts", function () {
 
+    $(".myfontsrecentlist").prepend('<div class="myfonts"><span>Recently Used</span><p onclick="copyit(this)" data-clipboard-target=".' + $(this).find("p").attr('class') + '" class="' + $(this).find("p").attr('class') + '">' + $(this).find("p").text() + '</p></div>');
 
-
-
-  /*
-    var url = window.location.href;
-    var params = url.split('?=');
-    urltext = params[1];
-    if (urltext) {
-      urltext = decodeURIComponent(urltext);
-      $('#nemo-text').val(urltext);
-      gen(urltext);
+    if ($('.myfontsrecentlist .myfonts').length > 3) {
+      $('.myfontsrecentlist .myfonts').last().remove();
     }
-  
-  
-    $(document).on("click", ".myfontslist .myfonts", function () {
-  
-      $(".myfontsrecentlist").prepend('<div class="myfonts"><span>Recently Used</span><p onclick="copyit(this)" data-clipboard-target=".' + $(this).find("p").attr('class') + '" class="' + $(this).find("p").attr('class') + '">' + $(this).find("p").text() + '</p></div>');
-  
-      if ($('.myfontsrecentlist .myfonts').length > 3) {
-        $('.myfontsrecentlist .myfonts').last().remove();
-      }
-  
-    });*/
+
+  });
   function gen() {
     var text = $('#nemo-text').val();
     $('.flourish1').html(wrapInFlourish(am(text)));
